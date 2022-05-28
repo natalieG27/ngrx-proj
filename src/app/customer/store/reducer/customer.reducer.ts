@@ -4,7 +4,7 @@ import {Customer} from '../../../models/customer';
 
 export const customerFeatureKey = 'customer';
 
-export interface State {
+export interface CustomerState {
   customers: Customer[];
 }
 
