@@ -1,8 +1,8 @@
 import { createFeatureSelector, createSelector } from '@ngrx/store';
 import * as fromCustomer from '../reducer/customer.reducer';
 
-export const selectCustomState = createFeatureSelector<fromCustomer.CustomerState>(
-  fromCustomer.CustomerFeatureKey,
+export const selectCustomerState = createFeatureSelector<fromCustomer.CustomerState>(
+  fromCustomer.customerFeatureKey,
 );
 
 export const selectCustomer = createSelector(

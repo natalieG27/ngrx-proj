@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Observable} from 'rxjs';
 import {Customer} from '../../models/customer';
 import {select, Store} from '@ngrx/store';
-import {selectedCustomer} from '../store/selector/customer.selector';
+import {selectCustomer} from '../store/selector/customer.selectors';
 import {CustomerState} from '../store/reducer/customer.reducer';
 
 @Component({
@@ -15,7 +15,7 @@ export class CustomerViewComponent implements OnInit {
 
 
   constructor(private store: Store<CustomerState>) { 
-    this.customers$ = this.store.pipe(select(selectedCustomer));
+    this.customers$ = this.store.pipe(select(selectCustomer));
   }
 
   ngOnInit(): void {

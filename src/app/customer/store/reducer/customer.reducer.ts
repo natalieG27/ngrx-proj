@@ -8,8 +8,8 @@ export interface CustomerState {
   customers: Customer[];
 }
 
-export const initialState: State = {
-  customers: [];
+export const initialState: CustomerState = {
+  customers: [],
 };
 
 export const customerReducer = createReducer(

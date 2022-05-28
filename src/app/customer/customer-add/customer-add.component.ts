@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {Customer} from '../../models/customer';
 import {select, Store} from '@ngrx/store';
+import {addCustomer} from '../store/action/customer.actions';
 import {CustomerState} from '../store/reducer/customer.reducer';
 
 @Component({
@@ -10,7 +11,7 @@ import {CustomerState} from '../store/reducer/customer.reducer';
 })
 export class CustomerAddComponent implements OnInit {
 
-  constructor(private store: Store<CustomerState) { }
+  constructor(private store: Store<CustomerState>) { }
 
   ngOnInit(): void {
   }
